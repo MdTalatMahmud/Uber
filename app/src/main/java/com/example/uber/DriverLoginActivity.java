@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class DriverLoginActivity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class DriverLoginActivity extends AppCompatActivity {
         firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             }
         };
 
